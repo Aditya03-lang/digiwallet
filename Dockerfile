@@ -16,6 +16,5 @@ WORKDIR /app
 
 COPY --from=build /app/target/digiwallet-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 8080
-
+# Railway injects PORT automatically — Spring Boot reads it via ${PORT:8080}
 CMD ["java", "-Dspring.profiles.active=prod", "-jar", "/app/app.jar"]
