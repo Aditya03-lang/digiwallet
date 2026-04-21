@@ -3,7 +3,6 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "java -Dspring.profiles.active=prod -jar app.jar"
 healthcheckPath = "/api/status"
 healthcheckTimeout = 120
 restartPolicyType = "ON_FAILURE"
